@@ -1,0 +1,41 @@
+.groupMenu {
+    display: flex;
+    align-items: center;
+    color: white;
+    height: 45px;
+}
+
+.collapse ul .groupMenu {
+    background-color: black;
+}
+.collapse ul .groupMenuText {
+    display: block;
+}
+.groupMenuText {
+    display: none;
+    margin-left: 10px
+ }
+.menuText {
+    color: white;
+    font-size: 16px;
+    /* position: fixed;
+    left: 50px; */
+    margin-left: 50px;
+    padding: 5px;
+}
+
+.collapse>ul>li>a>.menuText {
+    display: block;
+}
+.active {
+    background-color: gold
+}
+@media screen and (max-width: 480px) {
+    .listMenu,  {
+        display: none;
+        transition: display 2s
+    }
+    .colapse .listMenu {
+        display: block
+    }
+}
