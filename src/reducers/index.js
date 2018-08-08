@@ -4,7 +4,7 @@ import handleCollapse from '../components/Header/reducer';
 export default combineReducers({
   user: () => {
     return {
-      isAuthenticated: true,
+      isAuthenticated: false,
       loaded: false,
       lang: 'en'
     };

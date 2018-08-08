@@ -6,6 +6,7 @@ import Loadable from 'react-loadable';
 // import Header from './components/Header';
 import AuthRoute from './components/Router/AuthRouter';
 import UserRoute from './components/Router/UserRoute';
+import AppRoute from './components/Router/AppRouter';
 import './App.css';
 
 const LoadableDashBoard = Loadable({
@@ -21,7 +22,7 @@ const LoadableSetting = Loadable({
   }
 });
 const LoadableLogin = Loadable({
-  loader: () => import('./components/Login'),
+  loader: () => import('./containers/Login'),
   loading() {
     return <div>Loading...</div>;
   }
@@ -33,7 +34,7 @@ class App extends Component {
       <IntlProvider locale={lang}>
         <React.Fragment>
           <Switch>
-            <UserRoute path="/" exact component={() => null} />
+            <AppRoute path="/" exact component={() => null} />
             <AuthRoute
               path="/dashboard"
               component={() => (
